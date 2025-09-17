@@ -10,13 +10,11 @@ const { name, lastName, gender, age, picture } = Astro.props;
 	
 
 	<div class="w-70 h-90 bg-gray-800 rounded-xl shadow-md border mt-12 border-gray-700 flex flex-col ">
+		<div class="w-full h-32 bg-[url('/photo2.jpg')] bg-cover bg-center rounded-t-xl" title="Photo section"></div>
+
 		<div class="p-3 flex flex-col ">
 
-					<div 
-						class="w-full h-32 bg-[url('/photo2.jpg')] bg-cover bg-center rounded-t-xl mb-4"
-						title="Photo section"
-					></div>
-
+					
 			<div class="w-20 h-20 rounded-full flex  justify-center mb-4 overflow-hidden">
 				<img src={picture} alt="Profile picture" class="w-20 h-20 object-cover rounded-full absolute top-36 border-gray-700" />
 			</div>
