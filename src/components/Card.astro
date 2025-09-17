@@ -15,9 +15,9 @@ const { name, lastName, gender, age, picture } = Astro.props;
 		<div class="p-3 flex flex-col ">
 
 					
-			<div class="w-20 h-20 rounded-full flex  justify-center ">
-				<img src={picture} alt="Profile picture" class="w-20 h-20 object-cover rounded-full absolute top-36 border-gray-800 border-4 " />
-			</div>
+			
+			<img src={picture} alt="Profile picture" class="w-20 h-20 object-cover rounded-full absolute top-36 border-gray-800 border-4 " />
+			
 			<h2 class="text-xl font-semibold ">{name} {lastName}</h2>
 			<p class=" mt-1">Gender: <span class="font-medium ">{gender}</span></p>
 			<p class="">Age: <span class="font-medium ">{age}</span></p>
