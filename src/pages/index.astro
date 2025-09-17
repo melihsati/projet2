@@ -1,9 +1,29 @@
 ---
 import Basiclayout from "../layout/Basiclayout.astro";
+import Card from "../components/Card.astro";
+const reponseData = await fetch('https://randomuser.me/api/?results=5');
+const users = await reponseData.json();
+
+console.log(users);
 ---
 
-<basiclayout>
-  <h1 class="text-3xl font-bold underline">
+<Basiclayout>
+  <h1 class="text-3xl font-bold underline color">
 	Hello world!
   </h1>
-</basiclayout>
+  {users.results.map (user => (
+    <li class=" flex flex-row list-none">
+      <Card
+        name={user.name.first}
+        lastName={user.name.last}
+        gender={user.gender}
+        age={user.dob.age}
+        picture={user.picture.large}
+      />
+    </li>
+  ))}
+
+
+</section>
+  
+</Basiclayout>
